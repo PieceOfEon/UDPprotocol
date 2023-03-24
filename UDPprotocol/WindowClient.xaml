@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UDPprotocol"
         mc:Ignorable="d"
-        Title="WindowClient" Height="600" Width="800">
+        Title="WindowClient" Height="850" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" MinHeight="26"/>
@@ -13,11 +13,12 @@
             <RowDefinition Height="Auto" MinHeight="26"/>
             <RowDefinition Height="Auto" MinHeight="27.96"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition  Height="100"/>
-            <RowDefinition Height="22.98"/>
-            <RowDefinition Height="2"/>
-            <RowDefinition Height="62"/>
-            <RowDefinition Height="70"/>
+            <RowDefinition  Height="150"/>
+            <RowDefinition Height="38.98"/>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="64"/>
+            <RowDefinition Height="39"/>
+            <RowDefinition Height="65"/>
         </Grid.RowDefinitions>
 
         <Label Grid.Row="0" Content="Server IP Address:"/>
@@ -29,9 +30,16 @@
         <Button Grid.Row="4" x:Name="ConnectButton" Content="Connect" Margin="5,5,5,5" Click="ConnectButton_Click"  />
         <TextBox Margin="5,5,5,5" Grid.Row="5" x:Name="messagesTextBox"  VerticalScrollBarVisibility="Visible" AcceptsReturn="True" IsReadOnly="True" HorizontalScrollBarVisibility="Visible"/>
 
-        <Label Grid.Row="6" Content="Введите ваше сообщение:" Margin="0,0,0,62" Grid.RowSpan="3"/>
-        <TextBox Margin="5,5,5,5" Grid.Row="8" x:Name="messagesSendTextBox" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible"></TextBox>
-        <Button Grid.Row="9" x:Name="SendButton" Content="Send" Margin="5,5,5,26" Click="SendMessageButton_Click"  />
+        <Label Grid.Row="6" Content="Введите ваше сообщение:" Margin="0,0,0,10"/>
+        <TextBox Margin="5,5,5,5" Grid.Row="8" x:Name="messagesSendTextBox" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible"/>
+        <Button Grid.Row="10" x:Name="SendButton" Content="Send" Margin="5,5,5,26" Click="SendMessageButton_Click"  />
+        <ComboBox x:Name="ComboBoxRec" Grid.Row="9" HorizontalAlignment="Center" VerticalAlignment="Center" Width="168" SelectionChanged="ComboBoxRec_SelectionChanged" Height="22">
+            <Label Height="30" Content="Борщ" ></Label>
+            <Label Height="30" Content="Оливье"></Label>
+            <Label Height="30" Content="Салат Цезарь"></Label>
+            <Label Height="30" Content="Суп гороховый Шут"></Label>
+            <Label Height="30" Content="Картошка жареная"></Label>
+        </ComboBox>
 
         <!-- Другие элементы управления и разметка формы -->
     </Grid>
